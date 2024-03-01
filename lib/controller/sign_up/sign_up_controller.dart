@@ -17,6 +17,7 @@ class SignUpController extends GetxController {
   SignUpModel? signUpModelInfo;
 
   RxBool isResend = false.obs;
+  RxBool isTerms = false.obs ;
 
   final duration = const Duration().obs;
   Timer? timer;

@@ -76,7 +76,7 @@ class CreatePasscodeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         fieldHeight: 12.h,
                         fieldWidth: 12.w,
-                        activeFillColor: Colors.black,
+                        activeFillColor: AppColors.white100,
                         selectedFillColor: AppColors.transparentColor,
                         inactiveFillColor: AppColors.transparentColor,
                         borderWidth: 0.0.w,

@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-
 import '../../../controller/sign_up/sign_up_controller.dart';
 import '../../../core/app_route/app_route.dart';
 import '../../../utils/app_colors.dart';
@@ -96,11 +95,35 @@ class CreateAccount extends StatelessWidget {
                       bottom: 15 * h,
                     ),
                     CreateAccountAllFiled(),
-                    const Align(
+                    Align(
                         alignment: Alignment.center,
-                        child: CreateAccountTermsConditions()),
+                        child: Row(
+                          children: [
+                            Obx(() => Container(
+                                  height: 18.sp,
+                                  width: 18.sp,
+                                  margin: EdgeInsets.only(right: 12.w, left: 12.w),
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: AppColors.primaryColor,
+                                          width: 1)),
+                                  child: Checkbox(
+                                      value: signUpController.isTerms.value,
+                                      checkColor: AppColors.primaryColor,
+                                      activeColor: AppColors.background,
+                                      side: const BorderSide(
+                                          color: AppColors.transparentColor,
+                                          width: 1),
+                                      onChanged: (value) {
+                                        signUpController.isTerms.value = value!;
+                                      }),
+                                )),
+                            const Expanded(
+                                child: CreateAccountTermsConditions()),
+                          ],
+                        )),
                     SizedBox(
-                      height: 36 * h,
+                      height: 20 * h,
                     ),
                     Obx(() => signUpController.isLoadingSignUpScreen.value
                         ? const Center(child: CircularProgressIndicator())
@@ -111,7 +134,6 @@ class CreateAccount extends StatelessWidget {
                             buttonWidth: double.infinity,
                             titleWeight: FontWeight.w700,
                             onPressed: () {
-
                               Get.toNamed(AppRoute.signUpOtp);
 
                               //
@@ -128,11 +150,10 @@ class CreateAccount extends StatelessWidget {
                               //   }
                               // }
                               //
-
                             },
                           )),
                     SizedBox(
-                      height: 10 * h,
+                      height: 16 * h,
                     ),
                     const Align(
                         alignment: Alignment.center,

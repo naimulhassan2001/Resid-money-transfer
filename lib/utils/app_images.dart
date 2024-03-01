@@ -10,5 +10,6 @@ class AppImages {
   static const String cemac = "$basePath/cemac1.png";
   static const String whatsapp = "$basePath/whatsapp.png";
   static const String splashIcon = "$basePath/splash_icon.png";
+  static const String card = "$basePath/card.png";
   //static const String cemac = "$basePath/cemac3.svg";
 }

@@ -94,6 +94,8 @@ class ForgotPasswordVerification extends StatelessWidget {
                       keyboardType: TextInputType.number,
                       autovalidateMode: AutovalidateMode.disabled,
                       enableActiveFill: true,
+                      textStyle: TextStyle(color: AppColors.white100),
+
                     ),
                   ),
                   Padding(

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+import '../../view/screen/account_holder/account_holder.dart';
 import '../../view/screen/create_account/create_account.dart';
 import '../../view/screen/method/money_delivery_method.dart';
 import '../../view/screen/method/money_delivery_method_cameroon.dart';
@@ -101,6 +102,7 @@ class AppRoute {
   static const String changePhoneNumber = "/edit_phone_number.dart";
   static const String resetPasscode = "/reset_passcode_screen.dart";
   static const String deliveryMethodCameroon = "/money_delivery_method_cameroon.dart";
+  static const String accountHolder = "/account_holder.dart";
 
   static List<GetPage> routes = [
     GetPage(name: test, page: () => TestScreen()),
@@ -157,5 +159,6 @@ class AppRoute {
     GetPage(name: resetPasscode, page: () => ResetPasswordScreen()),
     GetPage(name: deliveryMethodCameroon, page: () => MoneyDeliveryMethodCameroon()),
     GetPage(name: transactionCancelScreen, page: () => TransactionCancelScreen()),
+    GetPage(name: accountHolder, page: () => const AccountHolder()),
   ];
 }

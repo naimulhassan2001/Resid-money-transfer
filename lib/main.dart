@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: AppColors.background,
           )),
           transitionDuration: const Duration(milliseconds: 200),
-          initialRoute: AppRoute.splashScreen,
+          initialRoute: AppRoute.accountHolder,
           navigatorKey: Get.key,
           getPages: AppRoute.routes,
         );

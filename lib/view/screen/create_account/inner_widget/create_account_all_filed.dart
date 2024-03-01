@@ -167,16 +167,9 @@ class CreateAccountAllFiled extends StatelessWidget {
           isPassword: true,
         ),
         SizedBox(
-          height: 16 * h,
+          height: 16.h,
         ),
 
-        Container(
-          width: 100,
-          height: 50,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(12.r))
-          ),
-        )
       ],
     );
   }
